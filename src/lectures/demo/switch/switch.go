@@ -13,5 +13,12 @@ const (
 )
 
 func main() {
-
+	switch p := price(); {
+	case p < 2:
+		fmt.Println("Cheap item")
+	case p < 10:
+		fmt.Println("Moderate item")
+	default:
+		fmt.Println("Expensive item")
+	}
 }

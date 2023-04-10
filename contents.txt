@@ -1,0 +1,235 @@
+// 1
+// why go ?
+// In-demand by high profile companies
+// Simplistic and easy to understand by design
+// same like npm - go registry
+// c-style syntax
+// first class concurrency support - perfect for backend
+// type safety by compiler
+// memory-safe
+    // garbage-collected - no need to manage memory
+// compiles to machine code for very fast speeds
+
+
+// 8 packages and modules
+// Go's way of organising code
+// one or more packages / imported from go package registry
+// packages should focus and perform a single thing
+    // eg argument parsing
+    // Drawing graphics
+    // Handling HTTP requests
+
+// using package
+import "name"
+// Batch import
+ import (
+    "name"
+    "namespace/packageName"
+ )
+
+// refer to the name of the package
+  import (
+     . "name" // . -> import everything
+     pk "namespace/packageName"
+  )
+
+
+// modules
+// collection of packages
+// go.mod file - root directory
+// all have a go.mod file
+
+
+eg
+ module example.com/practice
+
+ go 1.19
+
+ require (
+    "github.com/xyz v1.4.2"
+ )
+
+ // 9
+ // Data types
+ // Primitive type and type alias
+ // Go is Statically typed - Data types must be provided by the programmer
+ // Type inference - determine what type of data it is working with
+
+  // Signed Integer types - includes negative
+  //int8
+  //int16
+  //int
+  //int32
+  //int64
+
+  //Unsigned Integer Types - Only Positive includes 0
+  //unit8
+  //byte
+  //unit16
+  //uint
+  //uint32
+  //uint64
+  //uintptr || <pointer size>  - Depends on 32 or 64 bit systems
+
+  //Other Data types
+  //float32
+  //float64
+  //complex64 - 32-bit real and imaginary
+  //complex128
+  //bool
+
+   //Type Aliases
+   // easier to read
+   //type UserId int
+   //type Direction byte
+   //type Speed float64
+   //type Velocity Speed //Note here  **** || it is actually float64
+
+   // Type conversions
+    type UserId int
+    type speed float64
+
+    UserId(5)
+    speed(88.3)
+
+// 10
+// strings and runes
+ // rune - like char - letters, numbers, emojis,
+ // // String  - "vijay" - Multiple runes
+
+ || Runes: 'a' 'R' '7' '\n' `$`
+ || Strings: "Amount is $22\n"
+               "k"
+ || Raw Literal: `Let's Code in "Golang!"\n`
+
+
+// 11
+// go commands
+// build
+// build-race - check for concurrency problems
+// run
+// mod
+// mod tidy: updated dependencies
+// test - run test suit
+// fmt - formats all source files
+
+
+
+// 13 variables
+var example = 3
+var example int = 3
+var example int
+example = 3
+
+// compound creation
+var a,b,x = 1,2, "sample"
+
+// block creation
+var (
+a int = 1
+b int = 2
+c = "sample"
+)
+
+
+// create and assign
+example := 3
+a,b :=1, "sample"
+
+
+// defaults
+var name string
+
+string ""
+number 0
+other : nil (null in other laungage)
+
+// "Comma, Ok" idiom
+// a := 1
+    // var a = 5 ==> throws error
+//a, b := 1, 2
+//c, b := 3, 4 => Ok - No Error
+//x, err := //
+//y, err := //
+z, err := //
+
+// camelCase
+mylongVariableName := "hi"
+
+// constants
+ const MaxSpeed = 30
+ const MinPurchasePrice = 7.50
+
+
+
+// 16 functions
+
+func name (param type) type { // type = output type
+
+}
+
+func sum (lhs, rhs int) int {
+    return lhs + rhs
+}
+resume := sum(1,4)
+
+// multiple return
+func multiReturn () (int, int, int) {
+return 1,2,3
+}
+
+a, b, _ := multiReturn()
+
+
+// 19 operators
+
+
+// 20
+
+if condition {
+
+} else {
+
+}
+
+if i := 5; i < 10 {} else {}
+
+if rank := getUserRank(); rank == "admin" {}
+else if rank == "manager"{} else {}
+
+
+
+// 23 switch
+// default is optional
+x := 3
+switch x {
+case 1:
+    fmt.println("1")
+ default:
+    fmt.println("other:",x)
+}
+
+// Case List
+switch X {
+case 1,2,3 :
+///
+case 10,20,30:
+}
+
+// Fallthrough - Continue checking the next case
+switch letter {
+case ' ' :
+case 'a', 'e', 'i', 'o', 'u':
+    printf("Vowel")
+    fallthrough
+case 'A', 'E', 'I', 'O', 'U'
+printf("")
+}
+
+
+// for loop
+for i := 0 ; i < 10; i++ {
+
+
+}
+
