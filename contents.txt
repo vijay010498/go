@@ -298,3 +298,70 @@ var myArray [3]int
  item 1:= myArray[0]
 
  for i := 0; i < len(myArray); i++ {}
+
+
+// 37
+// slices
+// companion types that work with arrays
+// enable "view" into an array
+// dynamic and not fixed in size
+// original array remains untouched
+
+mySlice := []int{1,2,3}
+item1 := mySlice[0]
+
+// slice specific elenents
+
+slice[a:b]
+
+// example
+
+numbers := [...]int{1,2,3}
+
+slice1 := numbers[:] // [1,2,3]
+
+slice2 := numbers[1:] // [2,3,4]
+slice3 := slice2[:1] // [2]
+
+slice4 := numbers[:2]
+slice5 := numbers[1:3] // [2,3]
+
+// append can add additional elements
+
+numbers := []int{1,2,3}
+numbers = append(numbers, 4,5,6)
+
+// 3 dots used to extend a slice with another slice
+part1 := []int{1,2,3}
+part2 := []int{4,5,6}
+
+combined := append(part1, part2...)
+
+// preallocation
+// using make
+
+slice := make([]int, 10)
+
+
+func iterate(slice []int) {
+    for i := 0; i< len(slice); i++ {//}
+}
+}
+
+small := []int{1}
+big := []int{1,2,3,4,5,6,7}
+iterate(small)
+iterate(big)
+
+2D slices
+
+board := [][]string{
+    []string{"_", "_", "_", "_", "_", "_", "_"}
+    {"_", "_", "_", "_", "_", "_",}
+    {"_", "_", "_", "_", "_",}
+}
+
+board[0][0] = "X"
+board[2][2] = "O"
+board[1][2] = "X"
+board[1][0] = "O"
